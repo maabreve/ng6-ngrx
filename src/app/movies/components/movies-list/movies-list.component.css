@@ -1,0 +1,11 @@
+.moviecount {
+    width: 100px;
+}
+
+.remaining {
+    flex: 1 1 auto;
+}
+.text-center {
+    text-align: center;
+}
+  

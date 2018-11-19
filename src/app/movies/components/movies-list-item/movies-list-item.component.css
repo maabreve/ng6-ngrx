@@ -1,0 +1,32 @@
+.image {
+    height: 340px;
+}
+
+.card {
+    box-shadow: 2px 4px #cccccc;
+    margin-bottom: 40px;
+    height: 340px;
+    display: flex;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+.header {
+    margin-bottom: 30px;
+}
+.overview {
+    color: #555555
+}
+
+.outer
+{
+    position: relative;
+}
+
+.outer .inner
+{
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+}

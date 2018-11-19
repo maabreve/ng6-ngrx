@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+@media screen and (min-width:48em) { 
+  .columns { 
+    -webkit-column-count: 2;
+    -webkit-column-gap: 4%; 
+    -moz-column-count: 2; 
+    -moz-column-gap: 4%; 
+    column-count: 2; 
+    column-gap: 4%;
+  } 
+}
+
+a:link {
+    color: inherit;
+}
+
+/* visited link */
+a:visited {
+    color: inherit;
+}
+
+/* mouse over link */
+a:hover {
+    color: inherit;
+}
+
+/* selected link */
+a:active {
+    color: inherit;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.container {
+  width: 90% !important;
+}
+
+.content {
+    padding: 40px 0;
+}
+.section {
+    margin-bottom: 30px;
+}
+
+.rounded {
+    height: 40px; 
+    width: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+    background-color: black; 
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+.rounded-xg {
+    height: 60px; 
+    width: 60px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+    background-color: black; 
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 26px;
+    padding: 5px;
+}
+
+.p-20 {
+  padding: 20px;
+} 
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    padding: 10px;
+}
+
+.link {
+  cursor: pointer;
+}
+
+/*Icons*/
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+
+  

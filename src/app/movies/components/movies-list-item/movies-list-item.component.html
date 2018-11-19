@@ -1,0 +1,28 @@
+<div class="link" (click)='goToDetails(movie.id)'>
+    <div class="columnList card">
+    <div class="image">
+      <img *ngIf="movie.poster_path" class="ui middle aligned tiny image" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+      <img *ngIf="!movie.poster_path" class="ui middle aligned tiny image" src="https://placehold.it/200x340">
+    </div>
+    <div class="p-20 outer">
+      <div class="header">
+        <div class="row">
+          <div class="column">
+            <div class="rounded">
+              <i class="star icon"></i>
+              {{ movie.vote_average }}
+            </div>
+          </div>
+          <div class="column">
+            <div class="title">{{ movie.title }}</div>
+            <div class="release">{{ movie.release_date }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="overview">
+        {{ movie.overview.length <= 300 ? movie.overview : movie.overview.substring(1, 300) + '...' }} </div> <div
+          class="inner">
+          More Info
+      </div>
+    </div>
+  </div>

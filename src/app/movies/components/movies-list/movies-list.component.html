@@ -1,0 +1,11 @@
+<app-search-bar></app-search-bar>
+<div class="container">
+  <h2>Discover New Movies & TV Shows</h2>
+  
+  <div class="columns">
+    <div *ngFor="let movie of moviesList.results; index as i;">
+        <app-movies-list-item [movie]=movie></app-movies-list-item>
+    </div>
+  </div>
+  <app-pagination [moviesList$]="moviesList$" [source]="'movieslist'"></app-pagination>
+</div>

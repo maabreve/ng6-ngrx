@@ -1,0 +1,57 @@
+<div class="main-details">
+  <div class="background-image">
+    <div class="details" *ngIf="movie" [ngStyle]="{
+    background: '
+        linear-gradient(
+          rgba(0, 0, 0, 0.9), 
+          rgba(0, 0, 0, 0.9)
+        ),
+    url(https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '150% auto',
+    backgroundPosition: 'center top',
+    opacity: 0.8
+}">
+      <app-search-bar></app-search-bar>
+      <div class="container">
+        <div class="row content">
+          <div class="col-md-4">
+            <div class="image">
+              <img width="100%" *ngIf="movie.poster_path" class="ui middle aligned tiny image" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+              <img width="100%" *ngIf="!movie.poster_path" class="ui middle aligned tiny image" src="https://placehold.it/200x340">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="section">
+              <span>
+                <h2 class="movie-title">{{movie.title}}</h2>
+                <span class="release-date">&nbsp;(2018)</span>
+              </span>
+            </div>
+            <div class="section">
+              <div class="rounded-xg">
+                <i class="star icon"></i>
+                {{ movie.vote_average }}
+              </div>
+            </div>
+            <div class="section">
+              <h3>
+                Overview
+              </h3>
+              <p>
+                {{movie.overview}}
+              </p>
+            </div>
+            <div class="section">
+              <div class="container text-right">
+                <button type="button" class="btn btn-default d-inline" (click)='goToList()'>Back to List</button>
+                &nbsp;
+                <button type="button" class="btn btn-primary d-inline">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
