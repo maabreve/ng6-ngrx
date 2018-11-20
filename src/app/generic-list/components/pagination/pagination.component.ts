@@ -26,13 +26,13 @@ export class PaginationComponent implements OnInit {
     if (this.moviesList$) {
       this.moviesList$.subscribe(movies => {
         this.allItems = movies;
-        console.log('pagination ', movies);
         this.setPage(1);
       });
     }
   }
 
   setPage(page: number) {
+    console.log('pagination component ', page);
     if (this.allItems) {
       this.pager = this.pagerService.getPager(this.allItems.total_results, page);
     } else {

@@ -1,6 +1,11 @@
-.search-container {
-    width: 100%;
+.search-bar {
     font-style: italic;
     font-weight: 500;
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.inner-addon .glyphicon {
+    color: #3c3c3c;
 }

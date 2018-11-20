@@ -25,7 +25,6 @@ export class MoviesDetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(param => {
       this.id = param.id;
       this.movieService.getById(param.id).subscribe(movie => {
-        console.log(movie);
         this.movie = movie;
         this.isLoading = false;
         this._store.dispatch({

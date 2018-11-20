@@ -24,15 +24,14 @@ export class MoviesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.moviesList$ = this.movieService.getAll(1);
-    this.moviesList$.subscribe(movies => {
-      this.loadMovies(movies);
-    });
-
+    // this.moviesList$ = this.movieService.getAll(1);
+    // this.moviesList$.subscribe(movies => {
+    //   this.loadMovies(movies);
+    // });
 
     // search listener
     this.store.select(rootReducer.getGenericListSearch).subscribe(searchText => {
-      console.log(searchText);
+      console.log('movies list', searchText);
       this.moviesList$ = this.movieService.search(searchText);
       this.moviesList$.subscribe(searchResult => {
         this.loadMovies(searchResult);
@@ -41,8 +40,8 @@ export class MoviesListComponent implements OnInit {
 
     // pagination listener
     this.store.select(rootReducer.getGenericListPagination).subscribe(page => {
+      console.log('movies list', page);
       if (page) {
-        console.log(page);
         this.moviesList$ = this.movieService.getAll(page);
         this.moviesList$.subscribe(searchResult => {
           this.loadMovies(searchResult);

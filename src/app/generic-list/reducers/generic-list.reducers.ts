@@ -14,15 +14,12 @@ export const genericListReducer = (state: State = initialState, action): State =
   switch (action.type) {
     case GenericListActionTypes.SEARCH:
       const newGenericListSearch = Object.assign({}, state, { searchText: action.payload });
-      console.log('generic list reducer', newGenericListSearch);
       return Object.assign({}, state, newGenericListSearch);
     case GenericListActionTypes.PAGINATION:
       const newGenericListPagination = Object.assign({}, state, { pagination: action.payload });
-      console.log('generic list reducer', newGenericListPagination);
       return Object.assign({}, state,  newGenericListPagination);
     default:
-    console.log('default reducer');
-    return state;
+      return state;
   }
 };
 

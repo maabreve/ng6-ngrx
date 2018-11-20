@@ -10,3 +10,12 @@
 .navbar {
   margin-bottom: 0px !important;
 }
+.navbar-brand{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+}
+.navbar a {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
